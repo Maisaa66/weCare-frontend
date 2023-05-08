@@ -1,0 +1,28 @@
+.footer {
+  background: #0e74523f;
+}
+
+.copyRight {
+  background-color: var(--mainDark);
+  color: white;
+}
+
+i {
+  color: gray;
+}
+
+.ico {
+  color: gray;
+}
+
+.ico:hover {
+  color: var(--mainDark);
+}
+
+.connected a i:hover {
+  color: var(--mainDark) !important;
+}
+
+.logo {
+  width: 100px;
+}

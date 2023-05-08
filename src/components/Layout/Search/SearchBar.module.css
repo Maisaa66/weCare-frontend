@@ -1,0 +1,27 @@
+input.search {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--lightText);
+    color: var(--darkText);
+    width: 100%;
+  }
+  input.search::placeholder {
+    color: var(--darkText);
+    font-style: italic;
+    font-size: 14px;
+  }
+  input.search:focus {
+    background-color: transparent;
+    border-bottom: 1px solid var(--lightText);
+  }
+  input.search:focus::placeholder {
+    color: transparent;
+  }
+  .searchBtn {
+    background: none;
+    padding: 10px;
+    padding-right: 0;
+    color: var(--lightText);
+    border: none;
+  }

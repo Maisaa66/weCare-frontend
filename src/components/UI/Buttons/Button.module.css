@@ -1,0 +1,25 @@
+.mybtnMainSolid {
+  background-color: var(--mainColor);
+  color: var(--lightText);
+}
+
+.mybtnLightOutlined {
+  border: 1px solid var(--lightText);
+  background-color: var(--mainColor);
+  color: var(--lightText);
+}
+
+.btnSecSolid {
+  background-color: var(--secondaryColor);
+  color: var(--lightText);
+}
+
+.mybtnMainOutlined {
+  border: 1px solid var(--mainColor);
+  color: var(--mainColor);
+  background-color: var(--lightText);
+}
+
+.btn:focus{
+    outline: none;
+}

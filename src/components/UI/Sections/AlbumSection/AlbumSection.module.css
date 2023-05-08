@@ -1,0 +1,19 @@
+.background {
+  background-color: rgba(218, 245, 218, 0.463);
+  position: relative;
+}
+
+.style {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(218, 245, 218, 0.795);
+  border-radius: 64% 36% 30% 70% / 40% 49% 51% 60%;
+  position: absolute;
+  z-index: -1;
+  right: 240px;
+}
+
+.colorized {
+  color: var(--mainColor);
+  font-weight: 1000;
+}

@@ -1,0 +1,8 @@
+.img_container {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.img_container:hover {
+  filter: brightness(0.7);
+}

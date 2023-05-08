@@ -1,0 +1,63 @@
+.dropDown:hover, .dropDown:focus, .dropDown:active {
+    background-color: var(--mainColor)!important;
+}
+.navLink {
+    color: var(--darkText) !important;
+    font-size: 1rem !important;
+}
+.navLink:hover, .navLink:focus, .navLink:active {
+    color: rgba(9, 85, 60, 0.694) !important;
+    /* text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
+}
+.toggler {
+    font-size: 44px;
+    color: var(--darkText) !important;
+}
+/* .navList {
+
+} */
+@media screen and (max-width: 992px) {
+    .collapsed li{
+        border-bottom: 1px solid var(--lightText);
+        text-align: left;
+    }
+    .dropdownMenu {
+        width: 100%;
+        border-radius: 0;
+    }
+    .dropdownMenu a {
+        border-radius: 0 !important;
+    }
+}
+
+input.search {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--lightText);
+    color: var(--darkText);
+    width: 50%;
+  }
+  input.search::placeholder {
+    color: var(--darkText);
+    font-style: italic;
+    font-size: 14px;
+  }
+  input.search:focus {
+    background-color: transparent;
+    border-bottom: 1px solid var(--lightText);
+  }
+  input.search:focus::placeholder {
+    color: transparent;
+  }
+  .searchBtn {
+    background: none;
+    padding: 10px;
+    padding-right: 0;
+    color: var(--lightText);
+    border: none;
+  }
+
+  .logo {
+    width: 75px;
+  }

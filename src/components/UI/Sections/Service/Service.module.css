@@ -1,0 +1,33 @@
+.card {
+  background-color: rgb(236, 247, 236);
+  border-radius: 10px;
+  width: 350px;
+  height: 320px;
+  padding: 40px 0 0;
+  margin-top: 20px;
+  max-width: fit-content;
+}
+
+.card:hover {
+  background-color: rgb(226, 242, 226);
+}
+
+.icon_size {
+  font-size: 70px;
+  position: relative;
+  top: -15px;
+  left: -5px;
+  color: black;
+}
+
+.icon_container {
+  background-color: rgb(208, 235, 208);
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0 0 -30px;
+}

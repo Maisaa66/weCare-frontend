@@ -1,0 +1,6 @@
+mainColor: #22857B
+secColor: #EB96AB
+textColor: #ffff
+darkText: #475B5A
+  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;

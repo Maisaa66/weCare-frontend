@@ -1,0 +1,63 @@
+.header {
+  background-color: transparent;
+  min-height: 100vh;
+  color: var(--lightText);
+  position: relative;
+}
+.header p {
+  color: var(--darkText);
+  font-size: 1.15rem;
+}
+.header h1 {
+  font-weight: 600;
+  color: var(--darkText);
+}
+.span {
+  color: var(--mainDark);
+}
+/*background effects */
+.zBefore {
+  z-index: -10;
+  top: 0;
+  left: 0;
+}
+.customeImg {
+  border-radius: 62% 38% 72% 28% / 73% 53% 47% 27%;
+  overflow: hidden;
+  width: 430px;
+  height: 400px;
+}
+.headerImg {
+  background-image: url("../../../assets/images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bigger {
+  background: transparent;
+  border-radius: 62% 38% 72% 28% / 73% 53% 47% 27%;
+  width: 450px;
+  height: 430px;
+  padding: 15px;
+  border: 1px dashed gray;
+}
+.shape {
+  width: 230px;
+  height: 200px;
+  background: var(--mainShade);
+}
+.smallBorder {
+  height: 230px;
+  width: 250px;
+  left: -30px;
+  top: 140px;
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    background-color: var(--mainColorObacity);
+  }
+  .header p {
+    font-size: 0.95rem;
+  }
+}

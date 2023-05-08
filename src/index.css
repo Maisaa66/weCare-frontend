@@ -1,0 +1,103 @@
+@import "~mdb-ui-kit/css/mdb.min.css";
+:root {
+  --mainColor: #5ca795;
+  --mainDark: #66b9a6;
+  --mainShade: rgba(255, 255, 255, 0.5);
+  --mainColorObacity: rgb(14, 116, 82, 0.2);
+  --mainColorShade: rgb(14, 116, 82, 0.03);
+  --secondaryColor: #71d9c1;
+  --thirdColor: #90e4d05e;
+  --lightText: #ffff;
+  --darkText: #000000;
+  --headerFont: "Playfair Display", serif;
+  --textFont: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--textFont);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: url("../public/Images/pattern\ \(2\).svg"); */
+}
+/* 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
+/* button:focus{
+  outline: none;
+} */
+input:focus {
+  outline: none;
+}
+.mybtn {
+  background: none;
+  border: none;
+  display: block;
+  min-width: 160px;
+  padding: 5px 20px;
+  border-radius: 25px;
+  color: var(--mainColor);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.mybtnMainSolid {
+  background-color: var(--secondaryColor);
+  color: var(--darkText);
+}
+.mybtnLightSolid {
+  background-color: var(--lightText);
+  color: var(--mainColor);
+}
+.mybtnLightOutlined {
+  border: 1px solid var(--lightText);
+  background-color: var(--mainColor);
+  color: var(--lightText);
+}
+
+.btnSecSolid {
+  background-color: var(--secondaryColor);
+  color: var(--lightText);
+}
+
+.mybtnMainOutlined {
+  border: 1px solid var(--mainColor);
+  color: var(--mainColor);
+  background-color: var(--lightText);
+}
+
+
+.mybtnLightOutlined {
+  border: 1px solid var(--lightText);
+  background-color: transparent;
+  color: var(--lightText);
+}
+/* *{
+  border: 1px solid red;
+} */
+.h-500{
+  height: 500px;
+}
+.h-400{
+  height: 400px;
+}
+.h-300{
+  height: 300px;
+}
+.text-main{
+  color: var(--mainColor) !important;
+}
+.bg-main{
+  background-color: var(--mainColor) !important;
+}
+ .lihover:hover{
+  color: var(--mainColor) !important;
+ }

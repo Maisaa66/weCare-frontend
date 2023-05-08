@@ -1,0 +1,12 @@
+.ico {
+    color: gray;
+  }
+  
+  .form input:focus, .form textarea:focus{
+    border-color: var(--mainDark) !important; 
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .form label{
+    color: var(--mainDark);
+  }

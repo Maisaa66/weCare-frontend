@@ -1,0 +1,11 @@
+.payBtn {
+  background-color: var(--mainColor);
+  border: none;
+  font-family: var(--textFont);
+  /* color: var(--mainColor); */
+  color: var(--lightText);
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 15px;
+}

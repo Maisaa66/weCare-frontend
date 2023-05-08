@@ -1,0 +1,11 @@
+ul{
+    list-style: none;
+    font-size: 13px;
+}
+.brdr{
+    border-right: 1px solid gray;
+    height: 100%;
+}
+ nav span{
+    background-color: var(--mainColor);
+}

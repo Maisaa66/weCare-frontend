@@ -1,0 +1,23 @@
+.betterLivingInfo {
+  border-radius: 70px;
+  background-image: url("../../../assets/images/patient.jpg");
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+.CheckCircle {
+  color: var(--mainColor);
+  padding: 5px;
+}
+.spanHeading {
+  display: block;
+  color: var(--mainColor);
+}
+.betterLiving {
+  background-color: var(--mainColorShade);
+}
+
+.img-container {
+  width: 80%;
+  /* padding: 0 50px !important; */
+}

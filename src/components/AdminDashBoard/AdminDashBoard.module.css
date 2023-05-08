@@ -1,0 +1,18 @@
+.box {
+    background-image: url("../../../public/Images/pattern\ \(2\).svg");
+    height: 100vh;
+  }
+  .dashboard{
+  height: 670px;
+  width: 99%;
+
+  }
+  /* .hit{
+    height: 670px;
+  } */
+table,tr,td{
+  font-size: 12px;
+}
+ul li a{
+  cursor: pointer;
+}
