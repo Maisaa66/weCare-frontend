@@ -85,19 +85,6 @@ export default function StepOne() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  //   const styles = useStyles();
-  // const handleSubmit = (event) => {
-  //   console.log(userData);
-  //   event.preventDefault();
-
-  //   dispatch(setUserDetails(userData));
-  //   navigate("/signup/stepone");
-  // };
-
-  // const handleChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setUserData({ ...userData, [name]: value });
-  // };
   const {
     register,
     handleSubmit,
@@ -105,7 +92,6 @@ export default function StepOne() {
   } = useForm({ userData });
 
   const onSubmit = (data) => {
-    // console.log(data);
     dispatch(setUserDetails(data));
     navigate("/signup/stepone");
   };
@@ -225,7 +211,7 @@ export default function StepOne() {
                 type="password"
                 sx={{ textAlign: "left" }}
                 {...register("password", {
-                  required:  `${t("passwordError")}`,
+                  required: `${t("passwordError")}`,
                 })}
                 error={Boolean(errors.password)}
                 helperText={errors.password && errors.password.message}

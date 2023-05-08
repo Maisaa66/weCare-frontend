@@ -75,7 +75,7 @@ export default function RequestForm({ providerId, hourlyRate }) {
             authorization: `Bearer ${token}`,
           },
         })
-        .then((res) => console.log(res.data))
+        .then((res) => res)
         .catch((err) => console.log(err));
 
       setChecked(false);
@@ -136,7 +136,6 @@ export default function RequestForm({ providerId, hourlyRate }) {
                   onChange={(date) => {
                     setStartDate(date);
                     setReqData({ ...reqData, startDate: date });
-                    console.log(date);
                   }}
                   className="form-control"
                 />
@@ -153,7 +152,6 @@ export default function RequestForm({ providerId, hourlyRate }) {
                   onChange={(date) => {
                     setEndDate(date);
                     setReqData({ ...reqData, endDate: date });
-                    console.log(date);
                   }}
                   className="form-control z-3"
                 />

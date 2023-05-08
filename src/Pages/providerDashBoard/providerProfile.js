@@ -31,7 +31,6 @@ const ProviderProfile = () => {
         },
       }
     );
-    // console.log(info);
     setUserDetails(response.data.data);
   };
 

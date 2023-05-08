@@ -7,17 +7,14 @@ import * as ReactDOM from "react-dom";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Nav from "../Nav/Nav";
 
-// let router=createBrowserRouter([
-//  {path:'/admin',element}
-// ])
 export default function Main() {
   return (
     <div className="">
-     {/* <Update></Update> */}
+      {/* <Update></Update> */}
       {/* <Users></Users> */}
       {/* <SP></SP> */}
-{/* <AllDetails></AllDetails> */}
-{/* <AllRequests></AllRequests> */}
+      {/* <AllDetails></AllDetails> */}
+      {/* <AllRequests></AllRequests> */}
     </div>
   );
 }

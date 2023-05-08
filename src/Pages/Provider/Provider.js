@@ -18,15 +18,12 @@ const Provider = () => {
   const query = new URLSearchParams(location.search);
   const provider = query.get("provider");
 
-  // const [provider, setProvider] = useState("");
-
   // state for checking if the data is loaded or not
   const [loading, setLoading] = useState(true);
 
   // Redux
   const dispatch = useDispatch();
   const data = useSelector((state) => state.provider.providersData);
-  // console.log("data", data);
 
   useEffect(() => {
     axios
@@ -34,7 +31,6 @@ const Provider = () => {
         `https://wecare-api-pzwn.onrender.com/api/v1/providers?serviceType=${provider.toLowerCase()}`
       )
       .then((res) => {
-        console.log(res.data.data.providers);
         const data = res.data.data.providers.filter((provider) => {
           return provider.status === "approved";
         });

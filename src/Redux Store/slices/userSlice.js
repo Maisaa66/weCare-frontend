@@ -10,7 +10,6 @@ export const addUser = createAsyncThunk("user/addUser", async (userData) => {
       userData
     );
 
-    // console.log ("response data ", response);
     return response.data;
   } catch (error) {
     console.log("error", error);
@@ -20,12 +19,9 @@ export const addUser = createAsyncThunk("user/addUser", async (userData) => {
 export const getUserData = createAsyncThunk(
   "user/getUserData",
   async (id, { getState }) => {
-    // console.log("from async id1", id);
     const { user } = getState();
-    console.log("user from getState()", user);
     let urlType = user.userType === "serviceProvider" ? "providers" : "users";
     try {
-      // console.log("id", id);
       const response = await axios.get(
         `https://wecare-api-pzwn.onrender.com/api/v1/${urlType}/${id}`,
         {
@@ -54,7 +50,6 @@ export const userSlice = createSlice({
   },
   reducers: {
     setToken: (state) => {
-      console.log(state);
       // get cookie from browser and get the token
       const token = document.cookie.split("=")[1];
       state.token = token;
@@ -74,7 +69,6 @@ export const userSlice = createSlice({
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(addUser.fulfilled, (state, action) => {
-      console.log("ACTION", action.payload);
       // state.token = action.payload.cookie;
       // Add user to the state array
       // const navigate = useNavigate();
@@ -85,17 +79,14 @@ export const userSlice = createSlice({
       document.cookie = `jwt=${action.payload.cookie}; expires=${expires};`;
       // state.user.push(action.payload.data);
       return action.payload.data;
-      // console.log(action.payload);
     });
     builder.addCase(getUserData.fulfilled, (state, action) => {
       // Add user to the state array
       // const navigate = useNavigate();
       // navigate("/signup/stepthree");
-      console.log("action.payload.data", action.payload);
       state.info = action.payload.data;
       // state.user.push(action.payload.data);
       // return action.payload.data;
-      // console.log(action.payload);
     });
   },
 });

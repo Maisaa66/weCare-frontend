@@ -11,12 +11,10 @@ export default function () {
 
   const { pathname } = useLocation();
   const urlType = pathname.split("/")[2];
-  console.log(urlType);
   let { id } = useParams();
   let [user, setUser] = useState({});
 
   useEffect(() => {
-    console.log(id);
     axios
       .get(`https://wecare-api-pzwn.onrender.com/api/v1/${urlType}/${id}`, {
         withCredentials: true,
@@ -26,7 +24,6 @@ export default function () {
       })
       .then((res) => {
         setUser(res.data.data);
-        console.log(res.data.data);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -66,13 +63,13 @@ export default function () {
           <span className="text-main pe-2">Gender: </span>
           {user.gender}
         </li>
-        {urlType == 'providers' && user.status != 'pending'?
-        <li className="list-group-item">
-          <span className="text-main pe-2">Rating : </span>
-          {user.rating}
-        </li>:null
-      }
-        
+        {urlType == "providers" && user.status != "pending" ? (
+          <li className="list-group-item">
+            <span className="text-main pe-2">Rating : </span>
+            {user.rating}
+          </li>
+        ) : null}
+
         <li className="list-group-item">
           <span className="text-main pe-2">NationalID: </span>
           {user.nationalID}

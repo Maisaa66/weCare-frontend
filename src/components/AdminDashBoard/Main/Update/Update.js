@@ -11,9 +11,7 @@ export default function () {
 
   let { id } = useParams();
   let [user, setUser] = useState({});
-  // console.log(useParams());
   useEffect(() => {
-    console.log(useParams);
     axios
       .get(`https://wecare-api-pzwn.onrender.com/api/v1/${urlType}/${id}`, {
         withCredentials: true,

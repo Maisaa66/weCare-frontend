@@ -5,12 +5,10 @@ export const addProvider = createAsyncThunk(
   "provider/addProvider",
   async (userData) => {
     try {
-      console.log(userData);
       const response = await axios.post(
         "https://wecare-api-pzwn.onrender.com/api/v1/providers/signup",
         userData
       );
-      console.log("response  ", response);
       return response.data;
     } catch (error) {
       console.log("error", error);
@@ -33,31 +31,24 @@ export const providerSlice = createSlice({
     //set user type
     setProviderType: (state, action) => {
       state.type = action.payload;
-      // console.log("state.type ", state.type, "action.payload ", action.payload);
     },
     setProviderData: (state, action) => {
       state.providersData = action.payload;
-      // console.log("state.nursesData ", state.nursesData, "action.payload ", action.payload);
     },
     setRateQuery: (state, action) => {
       state.rateQuery = action.payload;
-      // console.log("state.rateQuery ", state.rateQuery, "action.payload ", action.payload);
     },
     setPriceQuery: (state, action) => {
       state.priceQuery = action.payload;
-      // console.log("state.priceQuery ", state.priceQuery, "action.payload ", action.payload);
     },
     setGenderQuery: (state, action) => {
       state.genderQuery = action.payload;
-      // console.log("state.genderQuery ", state.genderQuery, "action.payload ", action.payload);
     },
     setLocationQuery: (state, action) => {
       state.locationQuery = action.payload;
-      // console.log("state.locationQuery ", state.locationQuery, "action.payload ", action.payload);
     },
     setNightShiftQuery: (state, action) => {
       state.nightShiftQuery = action.payload;
-      // console.log("state.nightShiftQuery ", state.nightShiftQuery, "action.payload ", action.payload);
     },
     resetQuries: (state) => {
       state.rateQuery = "";
@@ -78,7 +69,6 @@ export const providerSlice = createSlice({
       // document.cookie = `jwt=${action.payload.cookie}; expires=${expires};`;
       // state.user.push(action.payload.data);
       return action.payload.data;
-      // console.log("ACTION!!!!", action.payload);
     });
   },
 });

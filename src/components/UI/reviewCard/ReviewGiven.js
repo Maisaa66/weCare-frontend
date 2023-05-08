@@ -5,30 +5,9 @@ import Rating from "@mui/material/Rating";
 
 const ReviewGiven = ({ review, urlType }) => {
   const token = useSelector((state) => state.user.token);
-
-  // const userType = useSelector((state) => state.user.userType);
-  // we get the profile id from the redux store because we need it to fetch the user profile data
-  // the profile id is the id of the user that we want to see his profile
-  // const profileId = useSelector((state)=> state.user.id);
-  // let urlType =""
   const [userName, setUserName] = useState(null);
 
   const getUserById = async (id) => {
-    // console.log("user type: ", userType);
-    // console.log("profile id from review card: ", profileId);
-    // console.log("from feview gived card: ",id);
-    // if the user is logged in and he is trying to see his own profile, we will fetch his data from the users collection
-    // if the user is logged in and he is trying to see another user profile, we will fetch his data from the providers collection
-    // if the user is not logged in, we will fetch the data from the providers collection
-    // if(id !== profileId ){
-    //   urlType = userType === "user" ? "users" : "providers"
-    // }
-    // else if ( id === profileId) {
-    //   urlType = userType === "user" ? "providers" : "users"
-    //   }
-    //   else{
-    //     urlType = "providers"
-    //   }
     await axios
       .get(
         `https://wecare-api-pzwn.onrender.com/api/v1/${urlType}/profile/${id}`,
@@ -41,7 +20,6 @@ const ReviewGiven = ({ review, urlType }) => {
       )
       .then((res) => setUserName(res.data.data))
       .catch((err) => console.log(err));
-    // console.log(info);
   };
 
   useEffect(() => {

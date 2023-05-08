@@ -10,11 +10,9 @@ export const userInfo = createSlice({
     //get user type
     setUserInfo: (state, action) => {
       state.type = action.payload;
-      console.log(state.type, action.payload);
     },
     setUserDetails: (state, action) => {
       state.userDetails = { ...state.userDetails, ...action.payload };
-      console.log("from redux: ", state.userDetails, action.payload);
     },
   },
 });

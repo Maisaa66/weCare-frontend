@@ -9,7 +9,6 @@ const Charts = function () {
   let providersNumData, usersNumData, serviceLocationsData, serviceTypeData;
   useEffect(() => {
     const fetchData = async () => {
-      console.log("fetching");
       try {
         const response = await axios.get(
           "https://wecare-api-pzwn.onrender.com/api/v1/stats?start=2023-04-30&end=2023-05-07",
@@ -22,7 +21,6 @@ const Charts = function () {
         );
         const data = await response.data;
         const stats = data.stats;
-        console.log(stats);
         setChartData(stats);
       } catch (error) {
         console.error("Error fetching chart data:", error);
@@ -78,7 +76,7 @@ const Charts = function () {
         },
       ],
     };
-    
+
     serviceTypeData = {
       labels: chartData.serviceTypeStats.map((item) => item.label),
       datasets: [
@@ -115,13 +113,13 @@ const Charts = function () {
       ],
     };
   }
- 
+
   if (chartData !== null) {
     return (
       <div className="container">
         <div className="row m-auto w-75">
-          <div className="col-lg-6 col-12 p-2 "  >
-            <div className="w-100 shadow rounded-5" >
+          <div className="col-lg-6 col-12 p-2 ">
+            <div className="w-100 shadow rounded-5">
               <Bar data={providersNumData}></Bar>
             </div>
           </div>
@@ -129,20 +127,18 @@ const Charts = function () {
             <div className="w-100 shadow rounded-5">
               <Bar data={usersNumData}></Bar>
             </div>
-            
           </div>
           <div className="col-lg-6 col-12 p-2 ">
-            <div className="w-100 shadow rounded-5" >
+            <div className="w-100 shadow rounded-5">
               <div className="w-50 m-auto ">
-                <Pie data={serviceTypeData} ></Pie>
+                <Pie data={serviceTypeData}></Pie>
               </div>
-              
             </div>
           </div>
           <div className="col-lg-6 col-12 p-2 ">
             <div className="w-100 shadow rounded-5">
               <div className="w-50 m-auto">
-                <Pie data={serviceLocationsData} ></Pie>
+                <Pie data={serviceLocationsData}></Pie>
               </div>
             </div>
           </div>
