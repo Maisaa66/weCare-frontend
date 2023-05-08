@@ -53,7 +53,7 @@ const Footer = () => {
                   </Link>
                 </p>
                 <p>
-                  <Link to="contact" className=" link-dark">
+                  <Link to="/contact" className=" link-dark">
                   {t("contact")}
                   </Link>
                 </p>
