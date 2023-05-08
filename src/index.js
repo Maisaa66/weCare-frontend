@@ -10,6 +10,9 @@ import "../node_modules/mdb-ui-kit/js/mdb.min";
 import { Provider } from "react-redux";
 import { persistor, store } from "./Redux Store/store";
 import { PersistGate } from "redux-persist/integration/react";
+import { disableReactDevTools } from "@fvilers/disable-react-devtools";
+
+if( process.env.NODE_ENV === 'production' ) {disableReactDevTools();};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
