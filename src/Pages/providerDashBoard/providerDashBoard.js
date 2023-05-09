@@ -75,23 +75,6 @@ const ProviderDashBoard = () => {
       .catch((err) => console.log(err));
   };
 
-  const getDocuments = async (filePath) => {
-    axios
-  .get(`https://wecare-api-pzwn.onrender.com/${filePath}`, {
-    responseType: "blob", // Set the response type to blob to get the file content
-  })
-  .then((response) => {
-    const url = window.URL.createObjectURL(new Blob([response.data]));
-    const link = document.createElement("a");
-    link.href = url;
-    link.setAttribute("download", filePath);
-    document.body.appendChild(link);
-    link.click();
-  })
-  .catch((error) => {
-    console.error("Error while downloading file", error);
-  });
-  }
   useEffect(() => {
     getProviderById(state);
     getProviderRequest(state);
@@ -378,7 +361,7 @@ const ProviderDashBoard = () => {
                               href={document}
                               target="_blank"
                               className="d-block"
-                              onClick={()=>{getDocuments(document)}}
+                             
                             >
                               document {index + 1}
                             </a>
