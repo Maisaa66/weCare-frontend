@@ -181,7 +181,8 @@ const ProviderDashBoard = () => {
               </div>
 
               {(provider.status === "rejected" ||
-                provider.status === "suspended" || provider.status === "pending") && (
+                provider.status === "suspended" ||
+                provider.status === "pending") && (
                 <Alert severity="error" sx={{ mt: 2 }}>
                   Your application has been {provider.status}, please contact
                   info@wecare.com for more details
@@ -356,15 +357,17 @@ const ProviderDashBoard = () => {
                       {provider.documents &&
                         provider.documents.map((document, index) => {
                           return (
-                            <a
-                              key={document}
-                              href={document}
-                              target="_blank"
-                              className="d-block"
-                             
-                            >
-                              document {index + 1}
-                            </a>
+                            <>
+                              <img src={`https://wecare-api-pzwn.onrender.com/${document}`}></img>
+                              <a
+                                key={document}
+                                href={`https://wecare-api-pzwn.onrender.com/${document}`}
+                                target="_blank"
+                                className="d-block"
+                              >
+                                document {index + 1}
+                              </a>
+                            </>
                           );
                         })}
                     </div>
