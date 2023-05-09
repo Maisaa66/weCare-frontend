@@ -358,7 +358,7 @@ const ProviderDashBoard = () => {
                         provider.documents.map((document, index) => {
                           return (
                             <>
-                              <img src={`https://wecare-api-pzwn.onrender.com/${document}`}></img>
+                              <img src={`https://wecare-api-pzwn.onrender.com/${document}`} className="w-100"></img>
                               <a
                                 key={document}
                                 href={`https://wecare-api-pzwn.onrender.com/${document}`}
