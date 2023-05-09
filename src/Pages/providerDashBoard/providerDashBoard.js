@@ -185,7 +185,7 @@ const ProviderDashBoard = () => {
               </div>
 
               {(provider.status === "rejected" ||
-                provider.status === "suspended") && (
+                provider.status === "suspended" || provider.status === "pending") && (
                 <Alert severity="error" sx={{ mt: 2 }}>
                   Your application has been {provider.status}, please contact
                   info@wecare.com for more details
