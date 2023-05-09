@@ -97,6 +97,8 @@ export default function StepFive() {
       Object.values(file).forEach((file) => {
         formData.append(file.name, file);
       });
+
+      console.log("file: ", file);
       // formData.append("file", file);
       formData.append("email", userDetails.email);
       // setUserData({ ...userData, documents: formData });
