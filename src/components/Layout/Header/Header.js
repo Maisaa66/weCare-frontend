@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import classes from "./Header.module.css";
 import { useTranslation } from "react-i18next";
 function Header() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <div className={`${classes.header} `}>
       <div className="d-none d-lg-block">
@@ -27,7 +29,10 @@ function Header() {
               {t("homeHeaderTitle")}
             </h1>
             <p className="lead my-4">{t("headerIntro")}</p>
-            <button className="mybtn mybtnLightSolid my-2">
+            <button
+              className="mybtn mybtnLightSolid my-2"
+              onClick={() => navigate("/about")}
+            >
               {t("homeHeaderBtn")}
             </button>
           </div>
