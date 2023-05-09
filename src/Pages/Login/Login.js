@@ -84,7 +84,6 @@ export default function SignIn() {
   const [userType, setUserType] = useState("");
   const [userData, setUserData] = useState({ email: "", password: "" });
   const [isError, setIsError] = useState({ status: false, message: "" });
-  // const userId = useSelector((state) => state.user.id);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -116,7 +115,6 @@ export default function SignIn() {
       setIsError({ status: true, message: `${t("passwordError")}` });
     } else {
       if (userType === "Care Giver") {
-        console.log("giver");
         await axios
           .post(
             "https://wecare-api-pzwn.onrender.com/api/v1/providers/login",
@@ -158,35 +156,6 @@ export default function SignIn() {
     const { name, value } = event.target;
     setUserData({ ...userData, [name]: value });
   };
-  // // onClick
-  // const handleLogin = async () => {
-  //   const jwt = Cookies.get("jwt");
-  //   const expires = new Date(
-  //     Date.now() + 2 * 24 * 60 * 60 * 1000
-  //   ).toUTCString(); // 2 days from now
-
-  //   if (userType === "Care Giver") {
-  //     console.log("giver");
-  //     await axios
-  //       .post("http://localhost:7000/api/v1/providers/login", userData)
-  //       .then((res) => (document.cookie = `jwt=${res.data.cookie}`))
-  //       .catch((error) =>
-  //         setIsError({ status: true, message: error.response.data })
-  //       );
-  //   } else if (userType === "Care Beneficiary") {
-  //     await axios
-  //       .post("http://localhost:7000/api/v1/users/login", userData)
-  //       .then(
-  //         (res) =>
-  //           (document.cookie = `jwt=${res.data.cookie}; expires=${expires}`)
-  //       )
-  //       .catch((error) =>
-  //         setIsError({ status: true, message: error.response.data })
-  //       );
-  //   } else {
-  //     setIsError({ status: true, message: "Please choose user type" });
-  //   }
-  // };
 
   return (
     <ThemeProvider theme={theme}>

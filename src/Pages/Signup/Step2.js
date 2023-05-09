@@ -125,7 +125,6 @@ export default function StepTwo() {
   const onSubmit = (data) => {
     if (address.country === "") {
       setDropdownError(true);
-      console.log(drowpdownError);
     } else {
       data.country = address.country;
 
@@ -133,7 +132,6 @@ export default function StepTwo() {
       if (userType === "Care giver") {
         navigate("/signup/stepfour");
       } else if (userType === "Care Beneficiary") {
-        console.log("added user: ", { ...userDetails, address: data });
         dispatch(addUser({ ...userDetails, address: data }));
         navigate("/signup/stepthree");
       }

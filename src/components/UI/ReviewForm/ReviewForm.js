@@ -66,9 +66,8 @@ export default function ReviewForm({ revieweeName }) {
           authorization: `Bearer ${token}`,
         },
       })
-      .then((res) => console.log(res.data))
+      .then((res) => res.data)
       .catch((err) => console.log(err));
-    console.log(reviewData);
     setReviewData({ ...reviewSchema });
     setOpen(false);
   };

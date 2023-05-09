@@ -8,7 +8,6 @@ export default function ReqDetails() {
   const token = useSelector((state) => state.user.token);
 
   useEffect(() => {
-    console.log(id);
     axios
       .get(`https://wecare-api-pzwn.onrender.com/api/v1/providers/${id}`, {
         withCredentials: true,
@@ -18,7 +17,6 @@ export default function ReqDetails() {
       })
       .then((res) => {
         setUser(res.data.data);
-        console.log(res.data.data);
       })
       .catch((err) => console.log(err));
   }, []);

@@ -94,34 +94,16 @@ export default function StepOne() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  //   const styles = useStyles();
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
 
-  //   dispatch(setUserDetails(userData));
-
-  // };
   const onSubmit = (data) => {
-    console.log("1", data);
     if (userData.gender === "") {
-      console.log("2", data);
-
       setDropdownError(true);
-      console.log(drowpdownError);
     } else {
-      console.log("3", data);
-
       data.gender = userData.gender;
-      console.log("4", data);
       dispatch(setUserDetails(data));
       navigate("/signup/steptwo");
     }
   };
-
-  // const handleChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setUserData({ ...userData, [name]: value });
-  // };
 
   const handleDropDownChange = (value) => {
     if (value) {

@@ -2,7 +2,15 @@ import React from "react";
 import NavBar from "../../Layout/NavBar/NavBar";
 import Footer from "../../Layout/Footer/Footer";
 import classes from "./About.module.css";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 const AboutPage = () => {
+  const { pathname } = useLocation();
+
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div className={classes.about}>
       <NavBar></NavBar>

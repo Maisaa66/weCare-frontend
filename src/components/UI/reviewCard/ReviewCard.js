@@ -13,7 +13,6 @@ const ReviewCard = ({ review }) => {
   const dispatch = useDispatch();
 
   const getUserById = async (id) => {
-    console.log(id);
     await axios
       .get(
         `https://wecare-api-pzwn.onrender.com/api/v1/${urlType}/profile/${id}`,
@@ -26,7 +25,6 @@ const ReviewCard = ({ review }) => {
       )
       .then((res) => setUserName(res.data.data))
       .catch((err) => console.log(err));
-    // console.log(info);
   };
 
   useEffect(() => {

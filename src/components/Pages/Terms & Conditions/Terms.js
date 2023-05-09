@@ -3,8 +3,15 @@ import classes from "./Terms.module.css";
 import NavBar from "../../Layout/NavBar/NavBar";
 import Footer from "../../Layout/Footer/Footer";
 import { Link } from "react-router-dom";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 const TermsConditionsPage = () => {
+  const { pathname } = useLocation();
+
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div className={classes.terms}>
       <NavBar></NavBar>

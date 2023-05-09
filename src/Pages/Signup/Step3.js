@@ -74,17 +74,12 @@ export default function StepThree() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (userType === "Care giver") {
-      console.log("from step3: ", userDetails);
       dispatch(addProvider(userDetails));
     }
     navigate("/login");
   };
   const userType = useSelector((state) => state.userInfo.type);
   const userDetails = useSelector((state) => state.userInfo.userDetails);
-
-  // useEffect(() => {
-
-  // }, []);
 
   return (
     <ThemeProvider theme={theme}>

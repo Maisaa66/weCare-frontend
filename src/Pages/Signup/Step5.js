@@ -99,7 +99,6 @@ export default function StepFive() {
       });
       // formData.append("file", file);
       formData.append("email", userDetails.email);
-      console.log(file);
       // setUserData({ ...userData, documents: formData });
       await axios
         .post("https://wecare-api-pzwn.onrender.com/upload", formData, {
@@ -112,12 +111,8 @@ export default function StepFive() {
             ...userData,
             documents: userData.documents.push(...res.data.filePath), //res.data.filePath[0
           });
-
-          console.log("file paths: ", res.data.filePath);
         })
         .catch((err) => console.log("from file axios: ", err));
-
-      console.log(userData);
       dispatch(setUserDetails(userData));
       navigate("/signup/stepthree");
     } else {
@@ -129,11 +124,7 @@ export default function StepFive() {
   const [filename, setFilename] = React.useState(`${t("formDocuments")}`);
   const onChange = (e) => {
     e.preventDefault();
-    // console.log(e.target.files);
-    // array of files
     setFile(e.target.files);
-    // setFilename(e.target.files[0].name);
-    // setFilename(e.target.files.map((file) => file.name));
   };
   return (
     <ThemeProvider theme={theme}>

@@ -44,7 +44,6 @@ const ProviderDashBoard = () => {
         },
       }
     );
-    console.log(response.data.data);
     setRequests(response.data.data);
   };
 
@@ -76,14 +75,10 @@ const ProviderDashBoard = () => {
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    // console.log(state);
     getProviderById(state);
     getProviderRequest(state);
     getReviewsMade(state);
   }, []);
-
-  console.log(requests);
-  // console.log(requests.requests[0].reqStatus);
 
   return (
     <>

@@ -41,7 +41,6 @@ const RequestCard = ({
         },
       }
     );
-    // console.log(info);
     setUserName(response.data.data);
   };
 
@@ -49,8 +48,6 @@ const RequestCard = ({
     userType === "serviceProvider"
       ? getUserById(request.customerId)
       : getUserById(request.providerId);
-
-    console.log(request);
   }, []);
 
   return (

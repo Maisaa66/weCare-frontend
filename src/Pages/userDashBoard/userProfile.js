@@ -22,7 +22,6 @@ const UserProfile = () => {
   // here we set the url type to know which profile we are going to fetch
 
   const getUserById = async (id) => {
-    console.log(id);
     const response = await axios.get(
       `https://wecare-api-pzwn.onrender.com/api/v1/users/profile/${id}`,
       {
@@ -32,12 +31,10 @@ const UserProfile = () => {
         },
       }
     );
-    // console.log(info);
     setUserDetails(response.data.data);
   };
 
   const getReviewsGiven = async (id) => {
-    console.log(id);
     await axios
       .get(
         `https://wecare-api-pzwn.onrender.com/api/v1/reviews/reviewee/${id}`,

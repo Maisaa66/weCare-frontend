@@ -34,7 +34,6 @@ const UserDashBoard = () => {
         },
       }
     );
-    // console.log(info);
     dispatch(setInfo(response.data.data));
     setUserDetails(response.data.data);
   };
@@ -49,7 +48,6 @@ const UserDashBoard = () => {
         },
       }
     );
-    // console.log(info);
     setRequests(response.data.data);
   };
 
@@ -98,14 +96,10 @@ const UserDashBoard = () => {
   };
 
   useEffect(() => {
-    // console.log(state);
     getUserById(state);
     getUserRequest(state);
     getReviewsMade(state);
   }, []);
-
-  console.log(reviewsMade);
-  // console.log(requests.requests[0].reqStatus);
 
   return (
     <>
