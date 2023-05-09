@@ -3,7 +3,9 @@ import classes from "./BetterLiving.module.css";
 import BTImg from "../../../assets/images/patient.jpg";
 import { CheckCircle } from "react-bootstrap-icons";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 const BetterLiving = () => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   return (
     <div className={`${classes.betterLiving}`}>
@@ -36,7 +38,7 @@ const BetterLiving = () => {
                 {t("benefitFour")}
               </li>
             </ul>
-            <button className="mybtn mybtnMainSolid m-auto m-md-0">{t("homeHeaderBtn")}</button>
+            <button className="mybtn mybtnMainSolid m-auto m-md-0" onClick={() => navigate("/provider?provider=Nurse")}>{t("homeHeaderBtn")}</button>
           </div>
         </div>
       </div>
