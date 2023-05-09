@@ -2,7 +2,15 @@ import Footer from "../../Layout/Footer/Footer";
 import NavBar from "../../Layout/NavBar/NavBar";
 import classes from "./Contact.module.css";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 const ContactPage = function () {
+  const { pathname } = useLocation();
+
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const { t } = useTranslation();
   return (
     <>

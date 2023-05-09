@@ -4,7 +4,7 @@ import providerSlice from "./slices/providerSlice";
 import userInfo from "./slices/userInfo";
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
-import logger from "redux-logger";
+// import logger from "redux-logger";
 import thunk from "redux-thunk";
 import { usersReducer } from "./slices/usersSlice";
 // create a persisted reducer, and pass it to the store
@@ -25,8 +25,9 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
-  middleware: [thunk, logger],
-  devTools:false
+  // middleware: [thunk, logger],
+  middleware: [thunk],
+  devTools: false,
 });
 
 const persistor = persistStore(store);

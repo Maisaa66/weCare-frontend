@@ -15,7 +15,6 @@ function Users() {
   const { pathname } = useLocation();
   const urlType = pathname.split("/")[2];
   let dispatch = useDispatch();
-  console.log(urlType);
 
   let [flag, setflag] = useState(true);
   let { users, topUsr, wrstUsr } = useSelector((state) => state.usersReducer);
@@ -35,7 +34,6 @@ function Users() {
         },
       })
       .then((res) => {
-        console.log(res);
         getAllUsers();
       })
       .catch((err) => console.log(err));
@@ -115,7 +113,9 @@ function Users() {
         <div className="col-10">
           <div className="d-flex align-items-center" style={{ height: "30px" }}>
             <h6 className="text-main text-start pt-2">All {urlType}</h6>
-            <span className="badge rounded-pill ms-2 bg-main">{users.length}</span>
+            <span className="badge rounded-pill ms-2 bg-main">
+              {users.length}
+            </span>
           </div>
           <div className={`h-500 shadow overflow-y-scroll`}>
             <table className="table bg-white  rounded-5 text-start w-75 shadow-sm  my-2 ">
@@ -165,7 +165,6 @@ function Users() {
                         onClick={() => {
                           if (usr && usr._id) {
                             handleDelete(usr._id);
-                            console.log(usr._id);
                           } else {
                             console.log("User or user ID is undefined");
                           }
