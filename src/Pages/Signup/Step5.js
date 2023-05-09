@@ -103,7 +103,7 @@ export default function StepFive() {
       formData.append("email", userDetails.email);
       // setUserData({ ...userData, documents: formData });
       await axios
-        .post("https://wecare-api-pzwn.onrender.com/upload", formData, {
+        .post("https://wecare-api-pzwn.onrender.com/uploads", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
