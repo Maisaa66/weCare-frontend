@@ -222,10 +222,12 @@ export default function RequestForm({ providerId, hourlyRate }) {
             <div>
               <Button onClick={handleClose}>Cancel</Button>
               {/* <Button onClick={handleRequest}>Request</Button> */}
-              <PayButton
-                requestDetails={{ sDate, eDate, reqData }}
-                onClick={handleRequest}
-              />
+              {checked && (
+                <PayButton
+                  requestDetails={{ sDate, eDate, reqData }}
+                  onClick={handleRequest}
+                />
+              )}
             </div>
           </DialogActions>
         </Dialog>
