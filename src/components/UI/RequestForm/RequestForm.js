@@ -65,7 +65,7 @@ export default function RequestForm({ providerId, hourlyRate }) {
 
   // handle request
   const handleRequest = async () => {
-    if (!userType || userType === "serviceProvider") {
+    if (userType==="" || userType === "serviceProvider") {
       setChecked(true);
     } else {
       axios
