@@ -32,7 +32,7 @@ export default function ReqDetails() {
       return (
         <div className="h-500 overflow-y-scroll m-2">
           {user?.documents?.map((img) => (
-            <img src={img} alt="" className="w-50" />
+            <img src={`https://wecare-api-pzwn.onrender.com/${img}`} alt="" className="w-50" />
           ))}
         </div>
       );
