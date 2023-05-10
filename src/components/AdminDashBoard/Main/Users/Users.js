@@ -34,7 +34,7 @@ function Users() {
         },
       })
       .then((res) => {
-        getAllUsers();
+        dispatch(getAllUsers(urlType));
       })
       .catch((err) => console.log(err));
   };
