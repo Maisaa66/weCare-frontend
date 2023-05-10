@@ -110,7 +110,7 @@ const ProviderDashBoard = () => {
                     src={
                       provider.profileImg
                         ? provider.profileImg
-                        : "https://cdn.vectorstock.com/i/1000x1000/32/12/default-avatar-profile-icon-vector-39013212.webp"
+                        : "../../assets/images/user.jpg"
                     }
                     className="rounded-circle"
                     style={{ width: "100px" }}
