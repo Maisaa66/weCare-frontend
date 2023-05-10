@@ -69,7 +69,7 @@ const UserProfile = () => {
                     src={
                       user.profileImg
                         ? user.profileImg
-                        : "../../assets/images/user.jpg"
+                        : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png"
                     }
                     className="rounded-circle"
                     style={{ width: "100px" }}
