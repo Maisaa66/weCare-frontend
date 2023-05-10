@@ -35,7 +35,7 @@ export default function Requests() {
   }, []);
 
   return (
-    <div className="row justify-content-center ">
+    <div className="row justify-content-center h-500 overflow-y-scroll">
       <h4 className="text-main">
         Pending requests
         <span className="badge rounded-pill ms-2  bg-main">
