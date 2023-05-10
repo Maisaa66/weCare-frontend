@@ -222,7 +222,7 @@ export default function RequestForm({ providerId, hourlyRate }) {
             <div>
               <Button onClick={handleClose}>Cancel</Button>
               {/* <Button onClick={handleRequest}>Request</Button> */}
-              {!checked && (
+              {userType==="user" && (
                 <PayButton
                   requestDetails={{ sDate, eDate, reqData }}
                   onClick={handleRequest}
